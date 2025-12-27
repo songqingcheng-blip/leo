@@ -37,10 +37,11 @@ header {
 }
 
 .naruto-img {
-    height: 80px;
+    height: 120px;
     width: auto;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
     transition: transform 0.3s ease;
+    border-radius: 10px;
 }
 
 .naruto-img:hover {
