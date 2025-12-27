@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认识人体经脉 - 儿童版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧘 神奇的经脉世界 🌟</h1>
+            <p class="subtitle">探索人体中的能量通道</p>
+            <p class="dedication">💝 送给亲爱的儿子：小航 💝</p>
+        </header>
+
+        <div class="main-content">
+            <div class="meridian-display">
+                <div class="human-body">
+                    <!--
+                        说明: 请将专业的人体经脉图片保存为 meridian.jpg 放在当前目录
+                        推荐从以下网站下载高清经脉图:
+                        - https://zhuanlan.zhihu.com/p/98347402
+                        - http://www.zhongyijinnang.com/?p=15748
+                    -->
+                    <img src="meridian.jpg"
+                         alt="人体十二经脉图"
+                         class="meridian-main-image"
+                         onerror="this.onerror=null; this.src='meridian-chart.svg';"
+                         style="display: block;">
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <div class="welcome-message" id="welcome">
+                    <h2>👋 欢迎来到经脉世界，小航！</h2>
+                    <p>点击<strong>左边图中的彩色线条</strong>，或者<strong>下方的按钮</strong>，就能了解不同的经脉知识啦！</p>
+                    <div class="fun-fact">
+                        <strong>💡 小知识：</strong>
+                        <p>中医认为，经脉是人体内气血运行的通道，就像身体里的"高速公路"一样！人体有十二条主要经脉，每条都有自己的特殊作用哦～</p>
+                    </div>
+                    <div class="fun-fact" style="margin-top: 15px; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 4px solid #2196f3;">
+                        <strong>🎮 小提示：</strong>
+                        <p>你还可以用键盘的<strong>方向键 ← →</strong>来切换不同的经脉！试试看吧～</p>
+                    </div>
+                </div>
+
+                <div class="meridian-info" id="meridian-info" style="display: none;">
+                    <h2 id="meridian-name"></h2>
+                    <div class="info-content">
+                        <div class="info-item">
+                            <strong>🏷️ 类型：</strong>
+                            <span id="meridian-type"></span>
+                        </div>
+                        <div class="info-item">
+                            <strong>⏰ 活跃时间：</strong>
+                            <span id="meridian-time"></span>
+                        </div>
+                        <div class="info-item">
+                            <strong>📍 主要路线：</strong>
+                            <p id="meridian-route"></p>
+                        </div>
+                        <div class="info-item">
+                            <strong>✨ 主要作用：</strong>
+                            <p id="meridian-function"></p>
+                        </div>
+                        <div class="info-item">
+                            <strong>🔴 重要穴位：</strong>
+                            <div id="meridian-acupoints"></div>
+                        </div>
+                        <div class="info-item fun-fact">
+                            <strong>🎯 趣味小贴士：</strong>
+                            <p id="meridian-tip"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="meridian-list">
+            <h3>📋 十二经脉快速导航</h3>
+            <div class="meridian-buttons">
+                <button class="meridian-btn" data-meridian="lung" style="background-color: #FF6B6B;">手太阴肺经</button>
+                <button class="meridian-btn" data-meridian="large-intestine" style="background-color: #4ECDC4;">手阳明大肠经</button>
+                <button class="meridian-btn" data-meridian="stomach" style="background-color: #FFE66D;">足阳明胃经</button>
+                <button class="meridian-btn" data-meridian="spleen" style="background-color: #95E1D3;">足太阴脾经</button>
+                <button class="meridian-btn" data-meridian="heart" style="background-color: #F38181;">手少阴心经</button>
+                <button class="meridian-btn" data-meridian="small-intestine" style="background-color: #AA96DA;">手太阳小肠经</button>
+                <button class="meridian-btn" data-meridian="bladder" style="background-color: #A8E6CF;">足太阳膀胱经</button>
+                <button class="meridian-btn" data-meridian="kidney" style="background-color: #FFB6B9;">足少阴肾经</button>
+                <button class="meridian-btn" data-meridian="pericardium" style="background-color: #FECA57;">手厥阴心包经</button>
+                <button class="meridian-btn" data-meridian="triple-energizer" style="background-color: #48DBFB;">手少阳三焦经</button>
+                <button class="meridian-btn" data-meridian="gallbladder" style="background-color: #FF9FF3;">足少阳胆经</button>
+                <button class="meridian-btn" data-meridian="liver" style="background-color: #54A0FF;">足厥阴肝经</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.95;
+}
+
+.dedication {
+    font-size: 1.3em;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffe5e5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.meridian-display {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+
+.human-body {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meridian-main-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.human-body svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.meridian {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2s ease-in-out forwards;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.meridian:hover {
+    stroke-width: 6;
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+.meridian.active {
+    stroke-width: 6;
+    filter: drop-shadow(0 0 12px currentColor);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.info-panel {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f093fb;
+}
+
+.welcome-message, .meridian-info {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-message h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.welcome-message p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.meridian-info h2 {
+    color: #f5576c;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 3px solid #f093fb;
+    padding-bottom: 10px;
+}
+
+.info-content {
+    color: #333;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #f093fb;
+}
+
+.info-item strong {
+    color: #667eea;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+.info-item span {
+    color: #555;
+    font-size: 1.05em;
+}
+
+.fun-fact {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    border-left: 4px solid #fdcb6e;
+}
+
+.fun-fact strong {
+    color: #d63031;
+}
+
+/* 穴位样式 */
+#meridian-acupoints {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.acupoint-item {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    border-left: 3px solid #f093fb;
+    transition: all 0.3s ease;
+}
+
+.acupoint-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.acupoint-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.acupoint-number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.acupoint-name {
+    color: #f5576c;
+    font-size: 1.1em;
+}
+
+.acupoint-location {
+    color: #667eea;
+    font-size: 0.9em;
+}
+
+.acupoint-effect {
+    color: #555;
+    font-size: 0.95em;
+    margin: 0;
+    padding-left: 32px;
+    line-height: 1.5;
+}
+
+.meridian-list {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.meridian-list h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.meridian-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.meridian-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+.meridian-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.meridian-btn:active {
+    transform: translateY(-1px);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .meridian-buttons {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .meridian-buttons {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG测试</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .svg-box {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 600px;
+            border: 2px solid #333;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .meridian {
+            cursor: pointer;
+            transition: stroke-width 0.3s;
+        }
+        .meridian:hover {
+            stroke-width: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>SVG显示测试</h1>
+        <p>如果你能看到下面的人体图和彩色线条，说明SVG正常工作</p>
+
+        <div class="svg-box">
+            <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" width="400" height="600">
+                <!-- 人体轮廓 -->
+                <ellipse cx="200" cy="80" rx="50" ry="60" fill="#FFE5CC" stroke="#333" stroke-width="2"/>
+                <!-- 身体 -->
+                <rect x="150" y="130" width="100" height="180" rx="20" fill="#FFE5CC" stroke="#333" stroke-width="2"/>
+                <!-- 手臂 -->
+                <line x1="150" y1="150" x2="100" y2="250" stroke="#FFE5CC" stroke-width="25" stroke-linecap="round"/>
+                <line x1="250" y1="150" x2="300" y2="250" stroke="#FFE5CC" stroke-width="25" stroke-linecap="round"/>
+                <!-- 腿 -->
+                <line x1="170" y1="310" x2="170" y2="500" stroke="#FFE5CC" stroke-width="30" stroke-linecap="round"/>
+                <line x1="230" y1="310" x2="230" y2="500" stroke="#FFE5CC" stroke-width="30" stroke-linecap="round"/>
+
+                <!-- 测试线条 -->
+                <path class="meridian" d="M 200 150 L 190 170 L 180 200 L 170 230 L 160 250 L 140 260"
+                      stroke="#FF6B6B" stroke-width="3" fill="none"/>
+                <path class="meridian" d="M 95 250 L 110 240 L 130 220 L 150 190 L 170 160 L 185 140"
+                      stroke="#4ECDC4" stroke-width="3" fill="none"/>
+                <path class="meridian" d="M 210 100 L 215 140 L 220 180 L 222 220 L 225 280 L 227 350 L 230 450"
+                      stroke="#FFE66D" stroke-width="3" fill="none"/>
+            </svg>
+        </div>
+
+        <p style="margin-top: 20px;">如果上面是空白的，请检查浏览器控制台是否有错误（按F12打开）</p>
+    </div>
+</body>
+</html>

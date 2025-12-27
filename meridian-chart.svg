@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200">
+  <!-- 背景 -->
+  <rect width="800" height="1200" fill="#f5f5f5"/>
+
+  <!-- 人体轮廓 -->
+  <g id="body-outline">
+    <!-- 头部 -->
+    <ellipse cx="400" cy="120" rx="80" ry="100" fill="#ffe5cc" stroke="#666" stroke-width="3"/>
+
+    <!-- 颈部 -->
+    <rect x="370" y="210" width="60" height="40" fill="#ffe5cc" stroke="#666" stroke-width="2"/>
+
+    <!-- 躯干 -->
+    <path d="M 340 250 L 320 300 L 310 400 L 320 550 L 340 600 L 400 620 L 460 600 L 480 550 L 490 400 L 480 300 L 460 250 Z"
+          fill="#ffe5cc" stroke="#666" stroke-width="3"/>
+
+    <!-- 左臂 -->
+    <path d="M 340 270 L 280 300 L 240 380 L 220 500 L 210 600"
+          stroke="#ffe5cc" stroke-width="50" fill="none" stroke-linecap="round"/>
+
+    <!-- 右臂 -->
+    <path d="M 460 270 L 520 300 L 560 380 L 580 500 L 590 600"
+          stroke="#ffe5cc" stroke-width="50" fill="none" stroke-linecap="round"/>
+
+    <!-- 左腿 -->
+    <path d="M 350 620 L 345 750 L 340 900 L 335 1050 L 330 1150"
+          stroke="#ffe5cc" stroke-width="60" fill="none" stroke-linecap="round"/>
+
+    <!-- 右腿 -->
+    <path d="M 450 620 L 455 750 L 460 900 L 465 1050 L 470 1150"
+          stroke="#ffe5cc" stroke-width="60" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- 经脉线条 -->
+  <!-- 手太阴肺经 (红色) -->
+  <path d="M 380 350 L 370 380 L 340 420 L 310 480 L 280 540 L 250 590"
+        stroke="#ff6b6b" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="240" y="610" fill="#ff6b6b" font-size="16" font-weight="bold">肺经</text>
+
+  <!-- 手阳明大肠经 (青色) -->
+  <path d="M 215 600 L 240 560 L 270 500 L 300 440 L 330 380 L 360 320"
+        stroke="#4ecdc4" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="200" y="620" fill="#4ecdc4" font-size="16" font-weight="bold">大肠经</text>
+
+  <!-- 足阳明胃经 (黄色) -->
+  <path d="M 420 140 L 425 220 L 430 320 L 435 450 L 440 620 L 445 800 L 448 1000 L 450 1140"
+        stroke="#ffe66d" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="455" y="1160" fill="#ffe66d" font-size="16" font-weight="bold">胃经</text>
+
+  <!-- 足太阴脾经 (绿色) -->
+  <path d="M 335 1140 L 338 1000 L 342 850 L 348 700 L 355 580 L 362 450 L 368 350"
+        stroke="#95e1d3" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="320" y="1160" fill="#95e1d3" font-size="16" font-weight="bold">脾经</text>
+
+  <!-- 手少阴心经 (粉红) -->
+  <path d="M 400 360 L 410 400 L 430 460 L 450 520 L 475 580"
+        stroke="#f38181" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="480" y="600" fill="#f38181" font-size="16" font-weight="bold">心经</text>
+
+  <!-- 手太阳小肠经 (紫色) -->
+  <path d="M 585 600 L 560 560 L 530 500 L 500 440 L 470 380 L 440 320"
+        stroke="#aa96da" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="590" y="620" fill="#aa96da" font-size="16" font-weight="bold">小肠经</text>
+
+  <!-- 足太阳膀胱经 (浅绿) -->
+  <path d="M 370 100 L 365 220 L 360 360 L 355 520 L 350 700 L 345 900 L 340 1100"
+        stroke="#a8e6cf" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="310" y="1120" fill="#a8e6cf" font-size="16" font-weight="bold">膀胱经</text>
+
+  <!-- 足少阴肾经 (粉色) -->
+  <path d="M 325 1140 L 328 1020 L 333 880 L 340 740 L 348 600 L 355 460 L 362 340"
+        stroke="#ffb6b9" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="300" y="1160" fill="#ffb6b9" font-size="16" font-weight="bold">肾经</text>
+
+  <!-- 手厥阴心包经 (橙色) -->
+  <path d="M 390 350 L 400 390 L 415 450 L 435 510 L 460 570"
+        stroke="#feca57" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="465" y="590" fill="#feca57" font-size="16" font-weight="bold">心包经</text>
+
+  <!-- 手少阳三焦经 (天蓝) -->
+  <path d="M 590 590 L 565 550 L 535 490 L 505 430 L 475 370 L 450 310"
+        stroke="#48dbfb" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="595" y="610" fill="#48dbfb" font-size="16" font-weight="bold">三焦经</text>
+
+  <!-- 足少阳胆经 (粉紫) -->
+  <path d="M 440 130 L 445 210 L 452 320 L 458 450 L 462 600 L 465 780 L 468 980 L 470 1130"
+        stroke="#ff9ff3" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="475" y="1150" fill="#ff9ff3" font-size="16" font-weight="bold">胆经</text>
+
+  <!-- 足厥阴肝经 (蓝色) -->
+  <path d="M 318 1140 L 323 1010 L 330 870 L 338 730 L 347 590 L 356 450 L 365 330"
+        stroke="#54a0ff" stroke-width="5" fill="none" stroke-dasharray="10,5"/>
+  <text x="290" y="1160" fill="#54a0ff" font-size="16" font-weight="bold">肝经</text>
+
+  <!-- 标题 -->
+  <text x="400" y="50" font-size="32" font-weight="bold" text-anchor="middle" fill="#333">人体十二经脉示意图</text>
+</svg>
