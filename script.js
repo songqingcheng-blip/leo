@@ -182,6 +182,16 @@ function showMeridianInfo(meridianId) {
 
     if (!data) return;
 
+    // 更新左侧图片
+    const meridianImage = document.querySelector('.meridian-main-image');
+    if (meridianImage) {
+        meridianImage.src = `meridians/${meridianId}.jpg`;
+        // 添加错误处理，如果特定经脉图片不存在，则显示默认图片
+        meridianImage.onerror = function() {
+            this.src = 'meridian-chart.svg';
+        };
+    }
+
     // 更新信息面板
     document.getElementById('meridian-name').textContent = data.name;
     document.getElementById('meridian-type').textContent = data.type;
